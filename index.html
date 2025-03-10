@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img\favicon.png">
+    <title>sinhx</title>
 </head>
 <body>
     <div id="typing"></div>
     <div id="name">Ivan Yanovskiy</div>
     <div id="links">
-        <a class="link-button" href="https://github.com/s1nhx"><img src="..\img\github.png"></a>
-        <a class="link-button" href="https://t.me/pizzaboyx"><img src="..\img\telegram.png"></a>
-        <a class="link-button" href="https://vk.com/sinhxxx"><img src="..\img\vk.png"></a>
+        <a class="link-button" href="https://github.com/s1nhx" target="_blank" title="Github"><img src="img\github.png"></a>
+        <a class="link-button" href="https://t.me/pizzaboyx" target="_blank" title="Telegram"><img src="img\telegram.png"></a>
+        <a class="link-button" href="https://vk.com/sinhxxx" target="_blank" title="VK"><img src="img\vk.png"></a>
     </div>
     <script>
         setTimeout(() => {
@@ -20,7 +22,7 @@
             const typingDiv = document.getElementById("typing");
             const linksDiv = document.getElementById("links");
             const nameDiv = document.getElementById("name");
-            
+
             function typeEffect() {
                 setTimeout(() => {
                     typingDiv.style.opacity = "1";
@@ -40,7 +42,7 @@
                     }, 400);
                 }
             }
-            
+
             typeEffect();
         }, 500);
     </script>
