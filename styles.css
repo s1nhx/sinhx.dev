@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #111;
+    color: white;
+    font-family: monospace;
+    text-align: center;
+    overflow: hidden;
+}
+#typing {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+    font-size: 2rem;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 0;
+}
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+#links {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    display: flex;
+    gap: 15px;
+}
+#name {
+    padding-bottom: 15px;
+    font-style: italic;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    display: flex;
+}
+.link-button img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+.link-button img:hover {
+    transform: scale(1.1);
+}

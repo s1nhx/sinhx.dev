@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="typing"></div>
+    <div id="name">Ivan Yanovskiy</div>
+    <div id="links">
+        <a class="link-button" href="https://github.com/s1nhx"><img src="..\img\github.png"></a>
+        <a class="link-button" href="https://t.me/pizzaboyx"><img src="..\img\telegram.png"></a>
+        <a class="link-button" href="https://vk.com/sinhxxx"><img src="..\img\vk.png"></a>
+    </div>
+    <script>
+        setTimeout(() => {
+            const text = "sinhx.dev";
+            let index = 0;
+            const typingDiv = document.getElementById("typing");
+            const linksDiv = document.getElementById("links");
+            const nameDiv = document.getElementById("name");
+            
+            function typeEffect() {
+                setTimeout(() => {
+                    typingDiv.style.opacity = "1";
+                }, 100);
+
+                if (index < text.length) {
+                    typingDiv.textContent += text[index];
+                    index++;
+                    setTimeout(typeEffect, 250);
+                } else {
+                    setTimeout(() => {
+                        typingDiv.style.transform = "translateY(-10px)";
+                        linksDiv.style.opacity = "1";
+                        linksDiv.style.transform = "translateY(0)";
+                        nameDiv.style.opacity = "1";
+                        nameDiv.style.transform = "translateY(0)";
+                    }, 400);
+                }
+            }
+            
+            typeEffect();
+        }, 500);
+    </script>
+</body>
+</html>
