@@ -1,1 +1,1 @@
-<a href="https://sinhx.dev"><h1>sinhx.dev</h1></a>
+<a href="https://sinhx.dev">sinhx.dev</a>
